@@ -1,0 +1,114 @@
+Overview
+This project is a simple blog application where users can create, read, update, and delete (CRUD) blog posts. 
+It integrates PHP with JavaScript, HTML, Bootstrap, and CSS. This will help students understand the basics of PHP and 
+how it interacts with a frontend built using HTML, Bootstrap, and JavaScript.
+
+Features
+Display a list of blog posts.
+Add a new blog post.
+Edit an existing blog post.
+Delete a blog post.
+
+Prerequisites
+XAMPP installed and running (Apache and MySQL).
+Basic understanding of HTML, CSS, JavaScript, and Bootstrap.
+
+Step-by-Step Guide
+
+1. Setting Up the Environment
+Start XAMPP and ensure Apache and MySQL are running.
+Create a new folder for your project in htdocs, e.g., simple_blog.
+
+2. Database Setup
+Open phpMyAdmin and create a new database named blog.
+
+
+3. Project Structure
+
+simple_blog/
+├── index.php (Homepage)
+├── add_post.php
+├── edit_post.php
+├── delete_post.php
+├── db.php
+├── css/
+│   └── styles.css
+└── js/
+    └── scripts.js
+
+camila/
+├── home.php 
+├── track.php
+├── track_answer.php
+├── camila_admin/
+│   └── conn.php
+│   └── login_process.php
+└── .htaccess
+
+
+When using XAMPP, your PHP files need to be placed within the htdocs directory (or a subdirectory within htdocs) 
+for Apache to serve them properly. This is because htdocs is the default web root directory for the Apache server in XAMPP.
+
+Why You Need to Use htdocs
+The htdocs directory is configured as the root directory for your web server in the Apache configuration. 
+When you access http://localhost/ in your web browser, Apache looks for files in this directory. Here are the key reasons:
+
+Web Root Directory: htdocs is set as the DocumentRoot in the Apache configuration file (httpd.conf). 
+This means that Apache serves files from this directory by default.
+Security: Running PHP files from the htdocs directory ensures that they are executed by the web server 
+and not simply opened as text files by the browser.
+Convenience: XAMPP is configured to work seamlessly with the htdocs directory, making it easier 
+to develop and test your PHP applications.
+
+ Create a New Table
+In the main area, you will see a section titled "Create table." Enter posts as the name of the table.
+Set the number of columns to 4 (as we need id, title, content, and created_at).
+Click the "Go" button to proceed.
+4. Define the Table Columns
+You will now see a table structure setup form with the columns you specified. Fill in the details as follows:
+Name	Type	Length/Values	Default	Collation	Attributes	Null	Index
+id	INT				UNSIGNED	No	PRIMARY
+title	VARCHAR	255				No	
+content	TEXT					No	
+created_at	TIMESTAMP		CURRENT_TIMESTAMP			No	
+5. Detailed Instructions for Each Column
+Column id:
+
+Name: id
+Type: INT
+Length/Values: Leave blank
+Default: Leave blank
+Collation: Leave blank
+Attributes: Select UNSIGNED from the dropdown (we will set AUTO_INCREMENT later)
+Null: Uncheck the Null box (ensure No is selected)
+Index: Select PRIMARY from the dropdown
+Column title:
+
+Name: title
+Type: VARCHAR
+Length/Values: 255
+Default: Leave blank
+Collation: Leave blank
+Attributes: Leave blank
+Null: Uncheck the Null box (ensure No is selected)
+Index: Leave blank
+Column content:
+
+Name: content
+Type: TEXT
+Length/Values: Leave blank
+Default: Leave blank
+Collation: Leave blank
+Attributes: Leave blank
+Null: Uncheck the Null box (ensure No is selected)
+Index: Leave blank
+Column created_at:
+
+Name: created_at
+Type: TIMESTAMP
+Length/Values: Leave blank
+Default: Select CURRENT_TIMESTAMP from the dropdown
+Collation: Leave blank
+Attributes: Leave blank
+Null: Uncheck the Null box (ensure No is selected)
+Index: Leave blank
